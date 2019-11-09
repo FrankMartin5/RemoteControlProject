@@ -37,11 +37,15 @@ public class RemoteControlApp {
 				pressButtion();
 				break;
 			case "Off":
+			case "off":
+			case "OFF":
+				break;
+			default:
+				System.out.println("Command not recognized.");
+				break;
 			}
-		} while (!input.equalsIgnoreCase("Off"));
-		turnOff();
-
-		
+		} while (!input.equalsIgnoreCase("Off")); 
+			turnOff();
 		
 		
 		kb.close();
